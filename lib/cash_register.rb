@@ -1,7 +1,7 @@
 class CashRegister
 
 attr_accessor :total
-attr_reader :discount, :price, :items, :last_transaction
+attr_reader :discount, :last_transaction
 #@@items_in_bag = []
 
   def initialize(discount=0)
@@ -14,7 +14,7 @@ attr_reader :discount, :price, :items, :last_transaction
     @total += (price * items)
     @last_transaction = (price * items)
       items.times do 
-        @@items_in_bag << self#title
+        @@items_in_bag << title
       end
   end
     
