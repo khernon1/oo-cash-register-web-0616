@@ -1,4 +1,3 @@
-require 'pry'
 class CashRegister
 
 attr_accessor :total
@@ -15,7 +14,7 @@ attr_reader :discount, :price, :items, :last_transaction
     @total += (price * items)
     @last_transaction = (price * items)
       items.times do 
-        @@items_in_bag << title
+        @@items_in_bag << self#title
       end
   end
     
